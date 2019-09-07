@@ -1,0 +1,31 @@
+body {
+  background-color: #3bb9ff;
+}
+#header {
+  text-align: center;
+  margin: 20px;
+}
+
+#title {
+  text-decoration: underline overline;
+}
+
+#survey-form {
+  text-align: center;
+  background-color: #7fff00;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.row-tab {
+  display: flex;
+  justify-content: center;
+}
+
+.label {
+  margin: 20px;
+}
+
+.input-box {
+  margin: 20px;
+}
