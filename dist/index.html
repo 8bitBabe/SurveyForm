@@ -1,23 +1,14 @@
-<!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Survey Form</title>
-  <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-<!-- partial:index.partial.html -->
 <body>
   <div id="header">
     <h1 id="title"><strong>Survey Form</strong></h1>
     <p id="description">How can we make your experience with 8B2 Studios better?</p>
   </div>
-  <form id="survey-form">
+  <div id="form-outer">
     <div class="row-tab">
       <div class="label">
-        <label id="name" for="name">* Name: </label>
+        <label id="name-label" for="name">* Name: </label>
       </div>
-      <div class="input-box">
+      <div class="right-tab">
         <input autofocus type="text" name="name" id="name" class="input-field" placeholder="Enter your name" required>
       </div>
     </div>
@@ -25,21 +16,85 @@
       <div class="label">
         <label id="email-label" for="email">* Email: </label>
       </div>
-      <div class="input-box">
+      <div class="right-tab">
         <input type="email" name="email" id="email" class="input-field" required placeholder="Enter your Email">
       </div>
     </div>
     <div class="row-tab">
       <div class="label">
-        <label id="number" for="age">* Age: </label>
+        <label id="number-label" for="age">* Age: </label>
       </div>
-      <div class="input-box">
+      <div class="right-tab">
         <input type="number" name="age" id="number" min="1" max="100" class="input-field" placeholder="Age">
       </div>
     </div>
-  </form>
+    <div class="row-tab">
+      <div class="label">
+        <label for="currentPos">Which option best describes your current role?</label>
+      </div>
+      <div class="right-tab">
+        <select id="dropdown" name="currentPos" class="dropdown">
+      <option disabled value>Select an option: </option>
+      <option  value="student">Student</option>
+      <option value="job">Full Time Job</option>
+      <option value="learner">Full Time Learner</option>
+      <option value="preferNo">Prefer not to say</option>
+      <option value="other">Other</option>
+    </select>
+      </div>
+    </div>
+    <div class="row-tab">
+      <div class="label">
+        <label for="userRating">* How likely is that you would recommend <br>8B2 Studios to a friend?</label>
+      </div>
+      <div class="right-tab">
+        <ul style="list-style: none;">
+          <li class="radio"><label>Definitely<input name="radio-buttons" value="1"  type="radio" class="userRatings" ></label></li>
+          <li class="radio"><label>Maybe<input name="radio-buttons" value="2"  type="radio" class="userRatings" ></label></li>
+          <li class="radio"><label>Not sure<input name="radio-buttons" value="3"  type="radio" class="userRatings" ></label></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row-tab">
+      <div class="label">
+        <label for="most-like">What do you like most in 8B2 Studios: </label>
+      </div>
+      <div class="right-tab">
+        <select id="most-like" name="mostLike" class="dropdown">
+      <option disabled selected value>Select an option</option>
+      <option value="challenges">Pixel Art</option>
+      <option value="projects">Projects</option>
+      <option value="community">Commissions</option>
+      <option value="openSource">Attitude</option>
+      <option value="openSource">All of the above</option>
+    </select>
+      </div>
+    </div>
+    <div class="row-tab">
+      <div class="label">
+        <label for="preferences">What would you like to see more of?<br>(Check all that apply): </label>
+      </div>
+      <div class="right-tab">
+        <ul id="preferences" style="list-style: none;">
+          <li class="checkbox"><label><input name="prefer" value="1" type="checkbox" class="userRatings">Coding Projects</label></li>
+          <li class="checkbox"><input name="prefer" value="2" type="checkbox" class="userRatings">Pixel Arts</li>
+          <li class="checkbox"><label><input name="prefer" value="3" type="checkbox" class="userRatings">Pixel Animations</label></li>
+          <li class="checkbox"><label><input name="prefer" value="4" type="checkbox" class="userRatings">Fan Arts</label></li>
+          <li class="checkbox"><label><input name="prefer" value="5" type="checkbox" class="userRatings">Themed Pixel Arts/Code Projects</label></li>
+          <li class="checkbox"><label><input name="prefer" value="6" type="checkbox" class="userRatings">Public Engagement</label></li>
+          <li class="checkbox"><label><input name="prefer" value="7" type="checkbox" class="userRatings">Giveaways</label></li>
+          <li class="checkbox"><label><input name="prefer" value="8" type="checkbox" class="userRatings">"Draw this in your style" Challenges</label></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row-tab">
+      <div class="label">
+        <label for="comments">Any Comments or Suggestions?</label>
+      </div>
+      <div class="right-tab">
+        <textarea id="comments" class="input-box" style="height:50px;resize:vertical;" name="comment" placeholder="Enter your comment here!"></textarea>
+      </div>
+    </div>
+    <button id="submit" type="submit">Submit</button>
+    </div>
 </body>
-<!-- partial -->
-  
-</body>
-</html>
